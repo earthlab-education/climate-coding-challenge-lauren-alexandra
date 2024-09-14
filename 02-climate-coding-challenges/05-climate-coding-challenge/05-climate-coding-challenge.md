@@ -20,8 +20,10 @@ stored in the previous notebooks using Jupyter cell magic:
 
 #### Examine the temperature distribution
 
-    54.545061098444506
-    4.017026720965293
+I wanted to inspect the data distribution more closely to see if it was a good fit for OLS Regression.
+
+    Average temperature: 54.545061098444506
+    Standard deviation:  4.017026720965293
 
 
 
@@ -290,7 +292,7 @@ Linear OLS regression makes some assumptions about the data which are correct: t
 
 
 
-    0.03
+    Slope: 0.03
 
 
 ## Plot your trend line
