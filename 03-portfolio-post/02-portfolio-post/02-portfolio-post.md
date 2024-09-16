@@ -1,38 +1,10 @@
-# Climate portfolio post
-
-Your turn!
-
-## Pick a new location and/or measurement to plot
-🌏 📈
-
-Recreate the workflow you just did in a place that interests you OR with
-a different measurement. You will need to make your own new Markdown and
-Code cells below this one, or create a new notebook.
-
-Your analysis should include:
-
-1.  A researched (with citations or links) **site description**,
-    including *why* you chose the site
-2.  A researched (with citations or links) **data description**,
-    including a **data citation**
-3.  A researched (with citations or links) **methods overview**
-4.  Some kind of **visual evidence** (plot, chart, diagram) for your
-    results
-5.  A **headline and description** for the visual evidence that
-    *interprets* your analysis and puts it *in context*
-
-You should also delete the instructions before submitting a portfolio page.
-
-To submit your portfolio post, we're going to do something a little different this week, to see if it is easier:
-
- 1. Put it in your portfolio repository, along with any images or interactive html visualization
- 2. Add a markdown file to the `posts/02-climate` folder that contains a link to your portfolio.
-
-### Site: SOUTH LAKE TAHOE 1.4 ESE, CA US
-
-<img src="south_lake_tahoe_station.png" alt="South Lake Tahoe Station" width="335px" height="400px">
+## Sierra Nevada Precipitation
 
 [Lake Tahoe](https://www.fs.usda.gov/main/ltbmu/about-forest/about-area) was selected to examine trends in California precipitation. The location is nested within the Sierra Nevada mountain range, which functions as a collection of moisture islands. The range forms barriers to incoming weather systems so that air and moisture are lifted over them, condensing the moisture which falls as precipitation to build thick snowpacks. Given the high precipitation and low evapotranspiration, the [Sierra](https://www.fs.usda.gov/psw/publications/documents/psw_gtr272/psw_gtr272_013.pdf) produces most of the runoff forming my state's water supply. 
+
+#### Site: SOUTH LAKE TAHOE 1.4 ESE, CA US
+
+<img src="south_lake_tahoe_station.png" alt="South Lake Tahoe Station" width="350px" height="420px">
 
 ##### Data Description
 
@@ -42,9 +14,11 @@ The South Lake Tahoe [subset]((https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/
 
 Menne, Matthew J., Imke Durre, Bryant Korzeniewski, Shelley McNeill, Kristy Thomas, Xungang Yin, Steven Anthony, Ron Ray, Russell S. Vose, Byron E.Gleason, and Tamara G. Houston (2012): Global Historical Climatology Network - Daily (GHCN-Daily), Version 3. [GHCND:US1CAED0035]. NOAA National Climatic Data Center. doi:10.7289/V5D21VHZ [09/15/2024].
 
-#### Methods
+##### Methods
 
 The data was accessed from a National Centers for Environmental Information [API service](https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation) and queried for the precipitation data type, station, and date range of 01-01-2022 to 12-31-2023. This range was chosen to gather full water years for comparison; the station began observing precipitation in late 2021. The CSV was ingested using the [pandas](https://pandas.pydata.org/) library and the date records converted to a pandas datetime object. Using these datetimes, month and year data were generated. Next the data was subset to precipitation, month, and year, and grouped by the month and year average observed precipitation value. Some months contained sparse daily records and the averages identified reflect this limitation. Finally, visualization libraries [Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/) were used to plot and display the relationship between month and precipitation across annual groupings.  
+
+#### Analysis
 
 
 
@@ -461,7 +435,7 @@ The data was accessed from a National Centers for Environmental Information [API
 
 
     
-![png](02-portfolio-post_files/02-portfolio-post_11_0.png)
+![png](climate-analysis_files/climate-analysis_12_0.png)
     
 
 
